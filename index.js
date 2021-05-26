@@ -24,7 +24,10 @@ for(let data in response.data.timings){
 
 }
 } 
+
+content.classList.remove("d-none")
+loading.classList.add("d-none")
 },error =>{
-    // console.log(error)
-    alert("you don't give me permission to get location")
+    console.log(error)
+    alert("Siz lokatsiyaga ruxsat bermagansiz")
 })
