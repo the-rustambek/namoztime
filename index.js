@@ -2,7 +2,7 @@ window.navigator.geolocation.getCurrentPosition(async lokatsiya=>{
 const lat=lokatsiya.coords.latitude
 const long=lokatsiya.coords.longitude
 
-let response= await fetch(`http://api.aladhan.com/v1/timings/calendar?latitude=${lat}&longitude=${long}&method=3&school=1&month=${new Date().getMonth()}&year=${new Date().getFullYear()}`);
+let response= await fetch(`https://api.aladhan.com/v1/timings/calendar?latitude=${lat}&longitude=${long}&method=3&school=1&month=${new Date().getMonth()}&year=${new Date().getFullYear()}`);
 response = await response.json()
 
 let times=["Dhuhr","Fajr","Asr","Isha","Maghrib"]
