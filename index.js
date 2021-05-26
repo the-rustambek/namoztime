@@ -13,8 +13,10 @@ for(let data in response.data.timings){
     const newNameElement=document.createElement('td')
     const newTimeElement=document.createElement('td')
     const tbodyElement=document.querySelector(".tbody")
+    const cityElement=document.querySelector(".city")
     newNameElement.textContent=data
     newTimeElement.textContent=response.data.timings[data]
+    cityElement.textContent=`${response.data.meta.timezone}`
     newTrElement.appendChild(newNameElement)
     newTrElement.appendChild(newTimeElement)
     tbodyElement.appendChild(newTrElement)
